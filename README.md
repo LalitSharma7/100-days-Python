@@ -1,2 +1,2 @@
-# 100-days-Python
+# Python Crash Course
 Based on Udemy Course
