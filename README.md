@@ -1,2 +1,2 @@
-# Python Crash Course
-Based on Udemy Course
+# Data science
+Everything about ML and Data science
