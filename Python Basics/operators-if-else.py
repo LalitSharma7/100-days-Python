@@ -1,222 +1,253 @@
 # -*- coding: utf-8 -*-
 """
 
-# 1. Python Output
+# Operators in Python
+
+- Arithmetic Operators
+- Relational Operators
+- Logical Operators
+- Bitwise Operators
+- Assignment Operators
+- Membership Operators
 """
 
-# Python is a case sensitive language
-print('Hello World')
+# Arithmetric Operators
+print(5+6)
 
-print('salman khan')
+print(5-6)
 
-print(salman khan)
+print(5*6)
 
-print(7)
+print(5/2)
 
-print(7.7)
+print(5//2)
 
-print(True)
+print(5%2)
 
-print('Hello',1,4.5,True)
+print(5**2)
 
-print('Hello',1,4.5,True,sep='/')
+# Relational Operators
+print(4>5)
 
-print('hello')
-print('world')
+print(4<5)
 
-print('hello',end='-')
-print('world')
+print(4>=4)
 
-"""# 2. Data Types"""
+print(4<=4)
 
-# Integer
-print(8)
-# 1*10^308
-print(1e309)
+print(4==4)
 
-# Decimal/Float
-print(8.55)
-print(1.7e309)
+print(4!=4)
 
-# Boolean
-print(True)
-print(False)
+# Logical Operators
+print(1 and 0)
 
-# Text/String
-print('Hello World')
+print(1 or 0)
 
-# complex
-print(5+6j)
+print(not 1)
 
-# List-> C-> Array
-print([1,2,3,4,5])
+# Bitwise Operators
 
-# Tuple
-print((1,2,3,4,5))
+# bitwise and
+print(2 & 3)
 
-# Sets
-print({1,2,3,4,5})
+# bitwise or
+print(2 | 3)
 
-# Dictionary
-print({'name':'Nitish','gender':'Male','weight':70})
+# bitwise xor
+print(2 ^ 3)
 
-# type
-type([1,2,3])
+print(~3)
 
-"""# 3. Variables"""
+print(4 >> 2)
 
-# Static Vs Dynamic Typing
-# Static Vs Dynamic Binding
-# stylish declaration techniques
+print(5 << 2)
 
-# C/C++
-name = 'nitish'
-print(name)
+# Assignment Operators
 
-a = 5
-b = 6
+# = 
+# a = 2
 
-print(a + b)
+a = 2
 
-# Dynamic Typing
-a = 5
-# Static Typing
-int a = 5
+# a = a % 2
+a %= 2
 
-# Dynamic Binding
-a = 5
-print(a)
-a = 'nitish'
+# a++ ++a
+
 print(a)
 
-# Static Binding
-int a = 5
+# Membership Operators
 
-a = 1
-b = 2
-c = 3
-print(a,b,c)
+# in/not in
 
-a,b,c = 1,2,3
-print(a,b,c)
+print('D' not in 'Delhi')
 
-a=b=c= 5
-print(a,b,c)
+print(1 in [2,3,4,5,6])
 
-"""# Comments"""
+# Program - Find the sum of a 3 digit number entered by the user
 
-# this is a comment
-# second line
-a = 4
-b = 6 # like this
-# second comment
-print(a+b)
+number = int(input('Enter a 3 digit number'))
 
-"""# 4. Keywords & Identifiers"""
+# 345%10 -> 5
+a = number%10
 
-# Keywords
+number = number//10
 
-# Identifiers
-# You can't start with a digit
-name1 = 'Nitish'
-print(name1)
-# You can use special chars -> _
-_ = 'ntiish'
-print(_)
-# identiers can not be keyword
+# 34%10 -> 4
+b = number % 10
 
-"""# Temp Heading
+number = number//10
+# 3 % 10 -> 3
+c = number % 10
 
-# 5. User Input
+print(a + b + c)
+
+"""# If-else in Python"""
+
+# login program and indentation
+# email -> nitish.campusx@gmail.com
+# password -> 1234
+
+email = input('enter email')
+password = input('enter password')
+
+if email == 'nitish.campusx@gmail.com' and password == '1234':
+  print('Welcome')
+elif email == 'nitish.campusx@gmail.com' and password != '1234':
+  # tell the user
+  print('Incorrect password')
+  password = input('enter password again')
+  if password == '1234':
+    print('Welcome,finally!')
+  else:
+    print('beta tumse na ho paayega!')
+else:
+  print('Not correct')
+
+# if-else examples
+# 1. Find the min of 3 given numbers
+# 2. Menu Driven Program
+
+# min of 3 number
+
+a = int(input('first num'))
+b = int(input('second num'))
+c = int(input('third num'))
+
+if a<b and a<c:
+  print('smallest is',a)
+elif b<c:
+  print('smallest is',b)
+else:
+  print('smallest is',c)
+
+# menu driven calculator
+menu = input("""
+Hi! how can I help you.
+1. Enter 1 for pin change
+2. Enter 2 for balance check
+3. Enter 3 for withdrawl
+4. Enter 4 for exit
+""")
+
+if menu == '1':
+  print('pin change')
+elif menu == '2':
+  print('balance')
+else:
+  print('exit')
+
+"""# Modules in Python
+
+- math
+- keywords
+- random
+- datetime
 """
 
-# Static Vs Dynamic
-input('Enter Email')
+# math
+import math
 
-# take input from users and store them in a variable
-fnum = int(input('enter first number'))
-snum = int(input('enter second number'))
-#print(type(fnum),type(snum))
-# add the 2 variables
-result = fnum + snum
-# print the result
-print(result)
-print(type(fnum))
+math.sqrt(196)
 
-"""# 6. Type Conversion"""
+# keyword
+import keyword
+print(keyword.kwlist)
 
-# Implicit Vs Explicit
-print(5+5.6)
-print(type(5),type(5.6))
+# random
+import random
+print(random.randint(1,100))
 
-print(4 + '4')
+# datetime
+import datetime
+print(datetime.datetime.now())
 
-# Explicit
-# str -> int
-#int(4+5j)
+help('modules')
 
-# int to str
-str(5)
+"""# Loops in Python
 
-# float
-float(4)
+- Need for loops
+- While Loop
+- For Loop
+"""
 
-"""# 7. Literals"""
+# While loop example -> program to print the table
+# Program -> Sum of all digits of a given number
+# Program -> keep accepting numbers from users till he/she enters a 0 and then find the avg
 
-a = 0b1010 #Binary Literals
-b = 100 #Decimal Literal 
-c = 0o310 #Octal Literal
-d = 0x12c #Hexadecimal Literal
+number = int(input('enter the number'))
 
-#Float Literal
-float_1 = 10.5 
-float_2 = 1.5e2 # 1.5 * 10^2
-float_3 = 1.5e-3 # 1.5 * 10^-3
+i = 1
 
-#Complex Literal 
-x = 3.14j
+while i<11:
+  print(number,'*',i,'=',number * i)
+  i += 1
 
-print(a, b, c, d)
-print(float_1, float_2,float_3)
-print(x, x.imag, x.real)
+# while loop with else 
 
-# binary
-x = 3.14j
-print(x.imag)
+x = 1
 
-string = 'This is Python'
-strings = "This is Python"
-char = "C"
-multiline_str = """This is a multiline string with more than one line code."""
-unicode = u"\U0001f600\U0001F606\U0001F923"
-raw_str = r"raw \n string"
+while x < 3:
+  print(x)
+  x += 1
 
-print(string)
-print(strings)
-print(char)
-print(multiline_str)
-print(unicode)
-print(raw_str)
+else:
+  print('limit crossed')
 
-a = True + 4
-b = False + 10
+# Guessing game
 
-print("a:", a)
-print("b:", b)
+# generate a random integer between 1 and 100
+import random
+jackpot = random.randint(1,100)
 
-k = None
-a = 5
-b = 6
-print('Program exe')
+guess = int(input('guess karo'))
+counter = 1
+while guess != jackpot:
+  if guess < jackpot:
+    print('galat!guess higher')
+  else:
+    print('galat!guess lower')
 
-"""# 8. Operators"""
+  guess = int(input('guess karo'))
+  counter += 1
 
-# Arithmetic
-# Relational
-# Logical
-# Bitwise
-# Assignment
-# Membership
+else:
+  print('correct guess')
+  print('attempts',counter)
 
-"""# 9. If-Else"""
+# For loop demo
+
+for i in {1,2,3,4,5}:
+  print(i)
+
+# For loop examples
+
+"""### Program - The current population of a town is 10000. The population of the town is increasing at the rate of 10% per year. You have to write a program to find out the population at the end of each of the last 10 years."""
+
+curr_pop = 10000
+
+for i in range(10,0,-1):
+  print(i,curr_pop)
+  curr_pop = curr_pop - 0.1*curr_pop
 
