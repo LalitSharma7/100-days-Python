@@ -1,5 +1,5 @@
 # Init is constructor and it runs everytime object call this class
-# self is the current object on which we are working
+# self is the current object on which we are working. Because one method of class cannot call other class we need self because only object of that class can call it
 
 L = [1,2,3]
 
