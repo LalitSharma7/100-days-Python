@@ -1,3 +1,5 @@
+# Init is constructor and it runs everytime object call this class
+
 L = [1,2,3]
 
 L.upper()
