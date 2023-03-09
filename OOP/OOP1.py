@@ -1,4 +1,5 @@
 # Init is constructor and it runs everytime object call this class
+# self is the current object on which we are working
 
 L = [1,2,3]
 
